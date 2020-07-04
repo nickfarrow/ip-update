@@ -39,6 +39,10 @@ def git_stash(newbranch):
     gc = subprocess.check_output(["git", "checkout", newbranch], cwd=gitloc)
     print(gc.decode('unicode_escape'))
 
+    gp = subprocess.check_output(["git", "pull", "origin", newbranch], cwd=gitloc)
+    print(gc.decode('unicode_escape'))
+
+    
     return prior_branch
 
 
